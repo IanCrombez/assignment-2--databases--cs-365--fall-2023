@@ -19,3 +19,8 @@ CREATE TABLE web_site (
 );
 
 
+INSERT INTO web_site (WEB_name, WEB_url, name_first, name_last, username, email, password, comment) VALUES
+    ('TestSite', 'http://www.testsite.com', 'Ian', 'Crombez', 'testuser', 'dontusethis@att.net', '1234', 'WOO COMMENT LETS GOO'),
+    ('TestSite2', 'http://www.testsite2.com', 'Ian', 'Crombez', 'testuser', 'dontusethis@att.net', '1234', 'WOO COMMENT LETS GOO'),
+    ('TestSite3', 'http://www.testsite3.com', 'Ian', 'Crombez', 'testuser', 'dontusethis@att.net', '1234', 'WOO COMMENT LETS GOO'),
+    ('TestSite4', 'http://www.testsite4.com', 'Ian', 'Crombez', 'testuser', 'dontusethis@att.net', '1234', 'WOO COMMENT LETS GOO');
