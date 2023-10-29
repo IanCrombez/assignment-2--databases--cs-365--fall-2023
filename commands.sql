@@ -4,7 +4,7 @@ INSERT INTO web_site (WEB_name, WEB_url, name_first, name_last, username, email,
 --get password
 SELECT CAST(AES_DECRYPT(password, @key_str, @init_vector)AS CHAR) AS real_password FROM web_site WHERE WEB_url = 'http://www.testsite.com';
 --get all data from https sites
-
+SELECT *, CAST(AES_DECRYPT(password, @key_str, @init_vector)AS CHAR) AS real_password FROM web_site WHERE WEB_url = 'https://%';
 --change a url of an entry
 
 --change any password
