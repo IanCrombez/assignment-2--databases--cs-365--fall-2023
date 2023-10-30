@@ -9,6 +9,8 @@ SELECT *, CAST(AES_DECRYPT(password, @key_str, @init_vector)AS CHAR) AS real_pas
 UPDATE web_site SET WEB_url = 'http://www.updatingSiteBasedonPassword.com' WHERE password = AES_ENCRYPT('1235', @key_str, @init_vector);
 --change any password
 UPDATE web_site SET password = AES_ENCRYPT('newPasswordCommand', @key_str, @init_vector) WHERE web_url = 'http://www.testsite.com';
---remove a url
+--remove a url (knuke the whole line)
+DELETE FROM web_site WHERE web_url = 'http://www.testsite.com';
+--remove a password (kill the line)
+DELETE FROM web_site WHERE password = AES_ENCRYPT('1237', @key_str, @init_vector);
 
---remove a password
